@@ -2,7 +2,7 @@ import fs from 'fs'
 
 export var Config = {} as ConfigInterface
 
-export function loadConfig(path: string = "", refreshCfg: boolean = true) : ConfigInterface {
+export function loadConfig(path: string = "config.json", refreshCfg: boolean = true) : ConfigInterface {
     // read file
     const fileContent = fs.readFileSync(path, 'utf-8')
     const jo = JSON.parse(fileContent)

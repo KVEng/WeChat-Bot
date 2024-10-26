@@ -1,9 +1,9 @@
 import { WechatyBuilder } from 'wechaty'
-import { OnReceiveMsg } from './handler/messageHandler'
-import { OnLogin, OnScan } from './handler/login'
-import {loadConfig} from "./store/config";
+import { OnReceiveMsg } from './src/handler/messageHandler.js'
+import { OnLogin, OnScan } from './src/handler/login.js'
+import { loadConfig } from "./src/store/config.js";
 
-loadConfig('./config.json')
+loadConfig()
 
 const wechaty = WechatyBuilder.build()
 wechaty

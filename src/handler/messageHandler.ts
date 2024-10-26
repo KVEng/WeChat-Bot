@@ -1,7 +1,7 @@
 import 'wechaty'
 import type {Room} from 'wechaty';
 import type {MessageInterface} from 'wechaty/impls';
-import { Config, saveConfig } from '../store/config';
+import { Config, saveConfig } from '../store/config.js';
 
 function isOldAge(msg: MessageInterface) {
     return msg.age() > 1 * 60 // over 1 min
