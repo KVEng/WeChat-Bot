@@ -1,5 +1,5 @@
-import { ScanStatus } from "wechaty";
-import { ContactSelfInterface } from "wechaty/impls";
+import type {ScanStatus} from "wechaty";
+import type {ContactSelfInterface} from "wechaty/impls";
 import qrTerm from 'qrcode-terminal';
 
 export function OnScan(qrcode: string, status: ScanStatus) {

@@ -1,6 +1,6 @@
 import 'wechaty'
-import { Room } from 'wechaty';
-import { MessageInterface } from 'wechaty/impls';
+import type {Room} from 'wechaty';
+import type {MessageInterface} from 'wechaty/impls';
 import { Config, saveConfig } from '../store/config';
 
 function isOldAge(msg: MessageInterface) {
@@ -12,7 +12,7 @@ export async function OnReceiveMsg(msg: MessageInterface) {
         return;
     }
 
-    if (!msg.mentionSelf()) return;
+    if (!await msg.mentionSelf()) return;
 
     const room = msg.room()
     if (room) { await OnRecieveRoomMsg(msg, room); return; }

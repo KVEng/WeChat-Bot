@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npx tsc main.ts
+tsc main.ts

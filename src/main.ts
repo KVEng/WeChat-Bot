@@ -1,7 +1,7 @@
 import { WechatyBuilder } from 'wechaty'
 import { OnReceiveMsg } from './handler/messageHandler'
 import { OnLogin, OnScan } from './handler/login'
-import { loadConfig } from './store/config'
+import {loadConfig} from "./store/config";
 
 loadConfig('./config.json')
 
